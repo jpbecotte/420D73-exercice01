@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice 01</title>
+</head>
+<body>
+    <div id="html_logger"></div>
+</body>
+<script>
+    (function () {
+
+        // save the original console.log function
+        var old_logger = console.log;
+
+        // grab html element for adding console.log output
+        var html_logger = document.getElementById('html_logger');
+
+        // replace console.log function with our own function
+        console.log = function(msg) {
+
+            // first call old logger for console output
+            old_logger.call(this, arguments);
+
+            // check what we need to output (object or text) and add it to the html element.
+            if (typeof msg == 'object') {
+                html_logger.innerHTML += (JSON && JSON.stringify ? JSON.stringify(msg) : msg) + '<br>';
+            } else {
+                html_logger.innerHTML += msg + '<br>';
+            }
+        }
+    })();
+</script>
+<script src="src/file01.js"></script>
+<script src="src/file02.js"></script>
+<script src="src/file03.js"></script>
+</html>
