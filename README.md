@@ -2,7 +2,7 @@
 
 Consignes pour l'exercice 01
 
-1. Faites un clone du projet `git@github.com:jpbecotte/420D73-exercice01.git`
+1. Faites un clone du projet `git clone git@github.com:jpbecotte/420D73-exercice01.git`
 1. Faites `cd 420D73-exercice01`
 1. Ensuite: `npm install` pour installer les librairies
 1. Pour exécuter: soit ouvrir `index.html` ou `npm run exec`
